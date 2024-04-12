@@ -84,6 +84,21 @@ return {
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
+    dap.adapters.php = {
+      type = 'executable',
+      command = 'node',
+      args = { '/home/stonedz/vscode-php-debug/out/phpDebug.js' },
+    }
+
+    dap.configurations.php = {
+      {
+        type = 'php',
+        request = 'launch',
+        name = 'Listen for Xdebug',
+        port = 9001,
+        hostname = '127.0.0.1',
+      },
+    }
     -- Install golang specific config
     require('dap-go').setup()
   end,
