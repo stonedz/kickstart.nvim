@@ -803,18 +803,18 @@ require('lazy').setup({
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end)
 
-      vim.keymap.set('n', '<C-h>', function()
-        harpoon:list():select(1)
-      end)
-      vim.keymap.set('n', '<C-j>', function()
-        harpoon:list():select(2)
-      end)
-      vim.keymap.set('n', '<C-k>', function()
-        harpoon:list():select(3)
-      end)
-      vim.keymap.set('n', '<C-l>', function()
-        harpoon:list():select(4)
-      end)
+      -- vim.keymap.set('n', '<C-h>', function()
+      --   harpoon:list():select(1)
+      -- end)
+      -- vim.keymap.set('n', '<C-j>', function()
+      --   harpoon:list():select(2)
+      -- end)
+      -- vim.keymap.set('n', '<C-k>', function()
+      --   harpoon:list():select(3)
+      -- end)
+      -- vim.keymap.set('n', '<C-l>', function()
+      --   harpoon:list():select(4)
+      -- end)
 
       -- Toggle previous & next buffers stored within Harpoon list
       vim.keymap.set('n', '<C-S-P>', function()
@@ -842,7 +842,6 @@ require('lazy').setup({
       require('mini.ai').setup { n_lines = 500 }
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
-      --   ciao ciao
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
@@ -871,7 +870,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'javascript', 'go', 'rust', 'php', 'phpdoc', 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+      ensure_installed = { 'gleam', 'python', 'javascript', 'go', 'rust', 'php', 'phpdoc', 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
