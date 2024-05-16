@@ -87,16 +87,18 @@ return {
     dap.adapters.php = {
       type = 'executable',
       command = 'node',
-      args = { '/home/stonedz/vscode-php-debug/out/phpDebug.js' },
+      args = { '/home/stonedz/.local/share/nvim/mason/packages/php-debug-adapter/extension/out/phpDebug.js' },
     }
 
     dap.configurations.php = {
       {
         type = 'php',
         request = 'launch',
-        name = 'Listen for Xdebug',
+        name = 'Xdebug on Docker',
         port = 9001,
-        hostname = '127.0.0.1',
+        hostname = '172.17.0.1',
+        serverSourceRoot = '/sites/localhost/html/public',
+        localSourceRoot = '/home/stonedz/work/ciaoflorence_new/',
       },
     }
     -- Install golang specific config
