@@ -770,6 +770,7 @@ require('lazy').setup({
         },
         sources = {
           { name = 'nvim_lsp' },
+          { name = 'orgmode' },
           { name = 'luasnip' },
           { name = 'path' },
         },
@@ -919,5 +920,7 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 -- Move block of text in visual mode
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = 'nc'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
