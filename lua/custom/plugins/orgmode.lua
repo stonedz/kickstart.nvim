@@ -1,6 +1,6 @@
 return {
   'nvim-orgmode/orgmode',
-  enabled = false,
+  enabled = true,
   event = 'VeryLazy',
   ft = { 'org' },
   config = function()
@@ -10,19 +10,19 @@ return {
       org_default_notes_file = '~/orgfiles/inbox.org',
     }
 
-    require('org-bullets').setup {
-      concealcursor = true, -- If false then when the cursor is on a line underlying characters are visible
-      symbols = {
-        list = '•',
-        headlines = { ' ', '󰺕 ', '✸', '✿' },
-        -- headlines = { "◉", "○", "✸", "✿" },
-        checkboxes = {
-          half = { '', 'OrgTSCheckboxHalfChecked' },
-          done = { '✓', 'OrgDone' },
-          todo = { '×', 'OrgTODO' },
-        },
-      },
-    }
+    -- require('org-bullets').setup {
+    --   concealcursor = true, -- If false then when the cursor is on a line underlying characters are visible
+    --   symbols = {
+    --     list = '•',
+    --     headlines = { ' ', '󰺕 ', '✸', '✿' },
+    --     -- headlines = { "◉", "○", "✸", "✿" },
+    --     checkboxes = {
+    --       half = { '', 'OrgTSCheckboxHalfChecked' },
+    --       done = { '✓', 'OrgDone' },
+    --       todo = { '×', 'OrgTODO' },
+    --     },
+    --   },
+    -- }
     -- NOTE: If you are using nvim-treesitter with `ensure_installed = "all"` option
     -- add `org` to ignore_install
     -- require('nvim-treesitter.configs').setup({

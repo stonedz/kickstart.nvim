@@ -770,7 +770,8 @@ require('lazy').setup({
         },
         sources = {
           { name = 'nvim_lsp' },
-          { name = 'neorg' },
+          -- { name = 'neorg' },
+          { name = 'orgmode' },
           { name = 'luasnip' },
           { name = 'path' },
         },
@@ -839,7 +840,24 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'gleam', 'python', 'javascript', 'go', 'rust', 'php', 'phpdoc', 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
+      ensure_installed = {
+        'gleam',
+        'python',
+        'javascript',
+        'go',
+        'rust',
+        'php',
+        'phpdoc',
+        'bash',
+        'c',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'vim',
+        'vimdoc',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {

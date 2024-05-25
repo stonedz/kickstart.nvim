@@ -1,6 +1,6 @@
 return {
   'chipsenkbeil/org-roam.nvim',
-  enabled = false,
+  enabled = true,
   tag = '0.1.0',
   dependencies = {
     {
