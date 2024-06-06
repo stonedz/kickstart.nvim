@@ -4,7 +4,7 @@
 ==================== READ THIS BEFORE CONTINUING ====================
 =====================================================================
 ========                                    .-----.          ========
-========         .----------------------.   | === |          ========
+         .----------------------.   | === |          ========
 ========         |.-""""""""""""""""""-.|   |-----|          ========
 ========         ||                    ||   | === |          ========
 ========         ||   KICKSTART.NVIM   ||   |-----|          ========
@@ -940,7 +940,6 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.opt.conceallevel = 2
 vim.opt.concealcursor = 'nc'
-
 -- vim.keymap.set('n', 'm', '<Plug>(leap)')
 -- vim.keymap.set('n', 'M', '<Plug>(leap-from-window)')
 -- vim.keymap.set({ 'x', 'o' }, 'm', '<Plug>(leap-forward)')
